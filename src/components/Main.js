@@ -8,6 +8,7 @@ import {
 import Nav from './Nav.js';
 
 import Login from './loginPage/Login.js';
+import Registration from './registrationPage/Registration.js';
 import Cocpit from './cocpit/Cocpit.js';
 import AddProduct from './addProduct/addProduct.js';
 
@@ -27,6 +28,7 @@ class AppComponent extends Component {
               <Route exact path="/" component={Cocpit} />
               <Route path="/addProduct" component={AddProduct} />
               <Route path="/login" component={Login} />
+              <Route path="/registration" component={Registration} />
             </div>
           </div>
         </div>
