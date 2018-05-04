@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import 'styles/Login.scss';
+import 'styles/Registration.scss';
 
 import Input from './Input.js';
 import Button from './Button.js';
 
 import {Icon} from 'react-font-awesome-5';
-import { NavLink as Link } from 'react-router-dom';
+
 import logo from '../../images/logo.png';
 
 class Login extends Component {
@@ -14,7 +14,7 @@ class Login extends Component {
       <div className="row justify-content-md-center my-5">
         <div className="col-md-12 col-lg-6 col-xl-4">
           <div className="card">
-            <div className="card-header"><Icon.User /> Logowanie</div>
+            <div className="card-header"><Icon.UserPlus /> Rejestracja</div>
             <div className="card-body text-center">
               <img className="cenLogo img-fluid" src={logo}/>
               <form id="login-form">
@@ -24,14 +24,11 @@ class Login extends Component {
                 <div className="form-group">
                   <Input placeholder="Hasło" type="password" />
                 </div>
-                  <Button text="Zaloguj" type="submit"/>
+                <div className="form-group">
+                  <Input placeholder="Powtórz hasło" type="password" />
+                </div>
+                  <Button text="Zarejestruj" type="submit"/>
               </form>
-              <a href="#"><p className="passReset mt-3">Zapomniałem hasła</p></a>
-              <hr className="cenHr" />
-              <p>Nie posiadasz jeszcze konta?</p>
-              <Link to="/registration" className="nav-link">
-                Zarejestruj się!
-              </Link>
             </div>
           </div>
         </div>
