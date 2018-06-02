@@ -19,15 +19,13 @@ export default class AddProduct extends Component {
                                 <AddProductInput title="Nazwa produktu" type="text" placeholder="Podaj nazwę produktu *" errorText="Nazwa produktu jest wymagana." id="product-name" name="product-name" />
                             </div>
                             <div className="col-md-6">
-                                <AddProductInput title="Kod produktu" type="text" placeholder="Podaj kod produktu *" errorText="Kod produktu jest wymagany." id="product-code" name="product-code" />
+                                <AddProductInput title="Cena sprzedaży" type="text" placeholder="Cena sprzedaży produktu *" errorText="Cena sprzedaży produktu jest wymagana." id="product-sell-price" name="product-sell-price" />
                             </div>
+                            
                         </div>
                         <div className="row">
-                            <div className="col-md-6">
-                                <AddProductInput title="Cena zakupu" type="text" placeholder="Cena zakupu produktu *" errorText="Cena zakupu produktu jest wymagana." id="product-buy-price" name="product-buy-price" />
-                            </div>
-                            <div className="col-md-6">
-                                <AddProductInput title="Cena sprzedaży" type="text" placeholder="Cena sprzedaży produktu *" errorText="Cena sprzedaży produktu jest wymagana." id="product-sell-price" name="product-sell-price" />
+                        <div className="col-md-12">
+                                <AddProductInput title="Kod produktu" type="text" placeholder="Podaj kod produktu *" errorText="Kod produktu jest wymagany." id="product-code" name="product-code" />
                             </div>
                         </div>
                         <div className="row">
@@ -41,10 +39,10 @@ export default class AddProduct extends Component {
                         </div>
                         <div className="row">
                             <div className="col-md-12">
-                                <div className="form-group ">
-                                    <label for="fileupload"><h4>Zdjęcie produktu</h4></label>
-                                    <input type="file" className="form-control-file " id="fileupload" aria-describedby="fileupload" multiple />
-                                    <small id="fileupload" className="form-text text-muted">Dodaj jedno lub więcej zdjęć produktu.</small>
+                            <div className="form-group">
+                                    <label for="form_photo_url"><h4>Url zdjęć : </h4></label>
+                                    <textarea id="form_photo_url" name="photo_url" className="form-control" placeholder="www.przyklad1.com, www.przykład2.com" rows="3" data-error="Prosze podać linki do zdjęć." required></textarea>
+                                    <div className="help-block with-errors"></div>
                                 </div>
                             </div>
                         </div>
