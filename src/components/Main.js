@@ -6,11 +6,13 @@ import {
 } from 'react-router-dom';
 
 import Nav from './Nav.js';
+import Footer from './Footer.js';
 
 import Login from './loginPage/Login.js';
 import Registration from './registrationPage/Registration.js';
 import Cocpit from './cocpit/Cocpit.js';
 import AddProduct from './addProduct/addProduct.js';
+import ProductDetails from './productDetails/ProductDetails.js';
 
 
 class AppComponent extends Component {
@@ -18,19 +20,17 @@ class AppComponent extends Component {
     return (
       <Router>
         <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <Nav />
-            </div>
-          </div>
+          <Nav />
           <div className="row">
             <div className="col-12">
               <Route exact path="/" component={Cocpit} />
               <Route path="/addProduct" component={AddProduct} />
               <Route path="/login" component={Login} />
               <Route path="/registration" component={Registration} />
+              <Route path="/productDetails/:id" component={ProductDetails} />
             </div>
           </div>
+          <Footer />
         </div>
       </Router>
     );

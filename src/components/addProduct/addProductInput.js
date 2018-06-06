@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-  
+
 export default class AddProductInput extends Component {
     render() {
         const title = this.props.title;
@@ -11,9 +11,9 @@ export default class AddProductInput extends Component {
 
         return (
             <div className="form-group">
-                <label for={id}><h4>{title}</h4></label>
+                <label htmlFor={id}><h4>{title}</h4></label>
                 <input id={id} type={type} name={name} className="form-control" placeholder={placeholder} data-error={errorText} required/>
-                
+
                 <div className="help-block with-errors"></div>
             </div>
         )
