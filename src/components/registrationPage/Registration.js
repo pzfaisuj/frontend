@@ -6,7 +6,6 @@ import Button from './Button.js';
 import {FormErrors} from './FormErrors.js'
 
 import {Icon} from 'react-font-awesome-5';
-
 import logo from '../../images/logo.png';
 
 class Login extends Component {
