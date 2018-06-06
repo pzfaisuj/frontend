@@ -62,9 +62,12 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
+    "axios": "^0.18.0",
     "bootstrap": "^4.1.0",
     "core-js": "^2.0.0",
+    "fs": "0.0.1-security",
     "jquery": "^3.3.1",
+    "json-loader": "^0.5.7",
     "node-sass": "^4.9.0",
     "popper.js": "^1.14.3",
     "react": "^15.6.2",

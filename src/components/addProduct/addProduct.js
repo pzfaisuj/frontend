@@ -21,7 +21,7 @@ export default class AddProduct extends Component {
                             <div className="col-md-6">
                                 <AddProductInput title="Cena sprzedaży" type="text" placeholder="Cena sprzedaży produktu *" errorText="Cena sprzedaży produktu jest wymagana." id="product-sell-price" name="product-sell-price" />
                             </div>
-                            
+
                         </div>
                         <div className="row">
                         <div className="col-md-12">
@@ -31,7 +31,7 @@ export default class AddProduct extends Component {
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="form-group">
-                                    <label for="form_description"><h4>Opis produktu</h4></label>
+                                    <label htmlFor="form_description"><h4>Opis produktu</h4></label>
                                     <textarea id="form_description" name="description" className="form-control" placeholder="Opis produktu *" rows="8" data-error="Prosze podać opis produktu." required></textarea>
                                     <div className="help-block with-errors"></div>
                                 </div>
@@ -40,8 +40,8 @@ export default class AddProduct extends Component {
                         <div className="row">
                             <div className="col-md-12">
                             <div className="form-group">
-                                    <label for="form_photo_url"><h4>Url zdjęć : </h4></label>
-                                    <textarea id="form_photo_url" name="photo_url" className="form-control" placeholder="www.przyklad1.com, www.przykład2.com" rows="3" data-error="Prosze podać linki do zdjęć." required></textarea>
+                                    <label htmlFor="form_photo_url"><h4>URL zdjęcia : </h4></label>
+                                    <textarea id="form_photo_url" name="photo_url" className="form-control" placeholder="www.przyklad.com" rows="3" data-error="Prosze podać link do zdjęcia." required></textarea>
                                     <div className="help-block with-errors"></div>
                                 </div>
                             </div>
