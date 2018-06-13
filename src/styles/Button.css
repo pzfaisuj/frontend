@@ -1,8 +1,9 @@
 .cenButton{
     border: none;
     background: green;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     color:white;
-    padding: 10px 30px;
+    padding: 8px 35px;
+    margin:0;
 }

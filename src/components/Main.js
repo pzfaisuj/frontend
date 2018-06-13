@@ -23,10 +23,10 @@ class AppComponent extends Component {
           <Nav />
           <div className="row">
             <div className="col-12">
-              <Route exact path="/" component={Cocpit} />
+              <Route exact path="/" component={Registration} />
               <Route path="/addProduct" component={AddProduct} />
               <Route path="/login" component={Login} />
-              <Route path="/registration" component={Registration} />
+              <Route path="/cocpit" component={Cocpit} />
               <Route path="/productDetails/:id" component={ProductDetails} />
             </div>
           </div>

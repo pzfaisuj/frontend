@@ -1,0 +1,29 @@
+.greyText{
+    font-size: 12px;
+    color: grey;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* .input2 {
+      margin: 10% auto auto auto;
+  } */
+
+  .zaloguj {
+    border: none;
+    background: green;
+    font-size: 12px;
+    color:white;
+    padding: 2px 10px;
+}
+  .navbar-brand {
+    margin-left: 5%;
+  }
+
+  .form-group p, .form-group a, .input2 {
+      margin: 0;
+  }
+
+  .input-group-append, #rem, .input-group{
+      margin:0;
+  }

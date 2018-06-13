@@ -7,6 +7,7 @@ import {FormErrors} from './FormErrors.js'
 
 import {Icon} from 'react-font-awesome-5';
 import logo from '../../images/logo.png';
+import tlo from '../../images/dust_scratches.png';
 
 class Login extends Component {
 
@@ -69,12 +70,22 @@ class Login extends Component {
 
  render() {
   return (
-    <div className="row justify-content-md-center my-5">
-      <div className="col-md-12 col-lg-6 col-xl-4">
+    <main role="main">
+    
+    <div className="jumbotron container text-left">
+      <div className="row">
+        <div className="col-md-8 text-justify text-center">
+        
+          <img className="cenLogo img-fluid mx-auto d-block" src={logo}/>
+          <br />
+          <h3>Cena jest tym, co płacisz. <br />Wartość jest tym, co otrzymujesz.</h3>
+          <p> - Warren Buffet</p>
+        </div>
+      <div className="col-md-4">
         <div className="card">
           <div className="card-header"><Icon.UserPlus /> Rejestracja</div>
           <div className="card-body text-center">
-            <img className="cenLogo img-fluid" src={logo}/>
+          
             <div className="panel panel-default">
               <FormErrors formErrors={this.state.formErrors} />
             </div>
@@ -93,7 +104,9 @@ class Login extends Component {
           </div>
         </div>
       </div>
+      </div>
     </div>
+    </main>
   );
 }
 }

@@ -37,7 +37,7 @@ export default class Cocpit extends Component {
         return (
             <div>
                 <div className="card">
-                <div className="card-header"><Icon.ShoppingCart /> Moje produkty</div>
+                <div className="card-header"><Icon.ShoppingCart /> Moje produkty </div>
                     <div className="card-body">
                     <Searcher updateSearch={this.updateSearch.bind(this)} />
                     <ProductTable search={this.state.search} data={this.state.data}/>
