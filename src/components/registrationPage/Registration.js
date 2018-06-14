@@ -7,7 +7,7 @@ import {FormErrors} from './FormErrors.js'
 
 import {Icon} from 'react-font-awesome-5';
 import logo from '../../images/logo.png';
-import tlo from '../../images/dust_scratches.png';
+
 
 class Login extends Component {
 
