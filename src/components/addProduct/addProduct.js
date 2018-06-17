@@ -1,8 +1,39 @@
 import React, { Component } from 'react';
 
-import AddProductInput from './addProductInput';
+import AddProductForm from './AddProductForm';
+import axios from 'axios';
 
 export default class AddProduct extends Component {
+
+addProduct = (e) => {
+    e.preventDefault();
+    const productName = e.target.elements.productName.value;
+    const productSellPrice = e.target.elements.productSellPrice.value;
+    const productCode = e.target.elements.productCode.value;
+    const formDescription = e.target.elements.formDescription.value;
+    const photoUrl = e.target.elements.photoUrl.value;
+    console.log('sell price: ' + productSellPrice);
+    console.log('product name: ' + productName);
+    console.log('product code: ' + productCode);
+    console.log('description: ' + formDescription);
+    console.log('photoUrl: ' + photoUrl);
+
+    axios.post('/addProduct', {
+        productName: productName ,
+        productSellPrice: productSellPrice ,
+        productCode: productCode ,
+        formDescription: formDescription ,
+        photoUrl: photoUrl
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+}
+
     render() {
       return (
         <div className="card">
@@ -11,53 +42,7 @@ export default class AddProduct extends Component {
             </div>
 
             <div className="card-body">
-                <form id="addProduct-form" method="POST" role="form">
-                    <div className="message"></div>
-                    <div className="controls">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <AddProductInput title="Nazwa produktu" type="text" placeholder="Podaj nazwę produktu *" errorText="Nazwa produktu jest wymagana." id="product-name" name="product-name" />
-                            </div>
-                            <div className="col-md-6">
-                                <AddProductInput title="Cena sprzedaży" type="text" placeholder="Cena sprzedaży produktu *" errorText="Cena sprzedaży produktu jest wymagana." id="product-sell-price" name="product-sell-price" />
-                            </div>
-
-                        </div>
-                        <div className="row">
-                        <div className="col-md-12">
-                                <AddProductInput title="Kod produktu" type="text" placeholder="Podaj kod produktu *" errorText="Kod produktu jest wymagany." id="product-code" name="product-code" />
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="form-group">
-                                    <label htmlFor="form_description"><h4>Opis produktu</h4></label>
-                                    <textarea id="form_description" name="description" className="form-control" placeholder="Opis produktu *" rows="8" data-error="Prosze podać opis produktu." required></textarea>
-                                    <div className="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                            <div className="form-group">
-                                    <label htmlFor="form_photo_url"><h4>URL zdjęcia : </h4></label>
-                                    <textarea id="form_photo_url" name="photo_url" className="form-control" placeholder="www.przyklad.com" rows="3" data-error="Prosze podać link do zdjęcia." required></textarea>
-                                    <div className="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row text-center">
-                            <div className="col-md-12">
-                                <input type="submit" className="btn btn-success btn-send " value="Dodaj produkt"/>
-                            </div>
-                        </div>
-                        <div className="row text-center">
-                            <div className="col-md-12">
-                                <p className="text-muted"><strong>*</strong> Pola oznaczone tym znakiem są wymagane.</p>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <AddProductForm addProduct={this.addProduct} />
             </div>
         </div>
       );
