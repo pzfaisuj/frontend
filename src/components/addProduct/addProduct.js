@@ -18,17 +18,19 @@ addProduct = (e) => {
     console.log('description: ' + formDescription);
     console.log('photoUrl: ' + photoUrl);
 
-    axios.post('/addProduct', {
-        productName: productName ,
-        productSellPrice: productSellPrice ,
+    axios.post('http://localhost:8095/products', {
+        name: productName ,
+        price: productSellPrice ,
         productCode: productCode ,
-        formDescription: formDescription ,
-        photoUrl: photoUrl
+        description: formDescription ,
+        imageURL: photoUrl
       })
       .then(function (response) {
+        console.log('Produkt został dodany');
         console.log(response);
       })
       .catch(function (error) {
+        console.log('Błąd podczas dodania produktu');
         console.log(error);
       });
 
