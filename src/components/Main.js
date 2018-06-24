@@ -12,6 +12,7 @@ import Login from './loginPage/Login.js';
 import Registration from './registrationPage/Registration.js';
 import Cocpit from './cocpit/Cocpit.js';
 import AddProduct from './addProduct/addProduct.js';
+import AddDomain from './addDomain/addDomain';
 import ProductDetails from './productDetails/ProductDetails.js';
 
 
@@ -25,6 +26,7 @@ class AppComponent extends Component {
             <div className="col-12">
               <Route exact path="/" component={Registration} />
               <Route path="/addProduct" component={AddProduct} />
+              <Route path="/addDomain" component={AddDomain} />
               <Route path="/login" component={Login} />
               <Route path="/cocpit" component={Cocpit} />
               <Route path="/productDetails/:id" component={ProductDetails} />

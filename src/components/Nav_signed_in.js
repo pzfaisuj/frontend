@@ -23,6 +23,11 @@ export default class Nav extends Component {
                             <Icon.PlusCircle /> Dodaj produkt
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link to="/addDomain" className="nav-link">
+                            <Icon.PlusCircle /> Dodaj domenę
+                        </Link>
+                    </li>
                 
                     <li className="nav-item">
                         <Link exact to="/" className="nav-link" activeClassName="active">
