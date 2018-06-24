@@ -38,7 +38,7 @@ addProduct = (e) => {
       return (
         <div className="card">
             <div className="card-header bg-transparent">
-                <h3 className="text-center mb-2">Dodaj produkt</h3>
+                <h3 className="text-center mb-2"> Dodaj produkt</h3>
             </div>
 
             <div className="card-body">

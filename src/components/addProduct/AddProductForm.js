@@ -11,9 +11,6 @@ export default class AddProductForm extends Component {
                 <div className="row">
                     <div className="col-md-6">
         
-        
-        
-        
                         <div className="form-group">
                             <label htmlFor="productName">
                                 <h4>Nazwa produktu</h4>
@@ -24,18 +21,8 @@ export default class AddProductForm extends Component {
                             <div className="help-block with-errors"></div>
                         </div>
         
-        
-        
-        
-        
-        
-        
-        
                     </div>
                     <div className="col-md-6">
-        
-        
-        
         
                         <div className="form-group">
                             <label htmlFor="productSellPrice">
@@ -46,17 +33,12 @@ export default class AddProductForm extends Component {
         
                             <div className="help-block with-errors"></div>
                         </div>
-        
-        
-        
-        
+                
                     </div>
         
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-        
-        
         
                         <div className="form-group">
                             <label htmlFor="productCode">
@@ -67,10 +49,6 @@ export default class AddProductForm extends Component {
         
                             <div className="help-block with-errors"></div>
                         </div>
-        
-        
-        
-        
         
                     </div>
                 </div>
@@ -100,15 +78,16 @@ export default class AddProductForm extends Component {
                 </div>
                 <div className="row text-center">
                     <div className="col-md-12">
-                        <input type="submit" className="btn btn-success btn-send " value="Dodaj produkt" />
-                    </div>
-                </div>
-                <div className="row text-center">
-                    <div className="col-md-12">
                         <p className="text-muted">
                             <strong>*</strong> Pola oznaczone tym znakiem są wymagane.</p>
                     </div>
                 </div>
+                <div className="row text-center">
+                    <div className="col-md-12">
+                        <input type="submit" className="btn btn-success btn-send " value="Dodaj produkt" />
+                    </div>
+                </div>
+                
             </div>
         </form>
         )

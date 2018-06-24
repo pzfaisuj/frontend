@@ -33,7 +33,7 @@ export default class ProductDetails extends Component {
   render() {
     let loading = <Spinner/>;
     let info = null;
-    let details = null;
+    let price = null;
 
     if(this.state.isImageLoaded) {
       loading = null;
@@ -41,42 +41,47 @@ export default class ProductDetails extends Component {
         <div className="info">
               <div className="row">
                 <div className="price col-md-12">
-                  <h5>{this.state.item.name}</h5>
+                  <h3> <strong> {this.state.item.name} </strong></h3>
+                  <h1 className="price-text-color">{this.state.item.price} zł</h1>
+                  <div className="col-sm-8 list">
+                    <h5>Dane techniczne:</h5>
+                      <ul>
+                        {this.state.details.map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    </div>
                 </div>
               </div>
               <div className="separator clear-left">         
-                <div className="row section-price">
-                  <h5 className="price-text-color">{this.state.item.price} zł</h5>
-                  <button type="button" className="btn btn-link btn-xs">
-                    <Icon.History /><span className="hidden-sm">Historia ceny</span>
-                  </button>
-                </div>
+               
               </div>
-            </div>
-      );
-      details = (
-        <div className="col-sm-8 list">
-        <h5>Dane techniczne:</h5>
-          <ul>
-            {this.state.details.map((item) => <li key={item}>{item}</li>)}
-          </ul>
         </div>
+      );
+      price = (
+        <div className="row section-price">
+       
+        <button type="button" className="btn btn-link btn-xs">
+          <Icon.History /><span className="hidden-sm">Historia ceny</span>
+        </button>
+      </div>
       );
     }
 
     return (
-      <div className="row">
-      {loading}
-        <div className="col-sm-4">
-          <div className="col-item">
-            <div className="photo">
-              <img src={this.state.item.imageURL} className="img-responsive"
-                onLoad={this.handleImageLoaded.bind(this)}/>
+      <div className="container">
+        <div className="container row">
+        {loading}
+          <div className="col-sm-4">
+            <div className="col-item">
+              <div className="photo">
+                <img src={this.state.item.imageURL} className="img-responsive"
+                  onLoad={this.handleImageLoaded.bind(this)}/>
+              </div>
             </div>
-            {info}
+            {price}
           </div>
+          {info}
+          
         </div>
-        {details}
       </div>
       );
     }

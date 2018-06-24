@@ -10,12 +10,9 @@ export default class Searcher extends Component {
                     <span className="input-group-text" id="basic-addon1"><Icon.Search /></span>
                 </div>
 
-                <input type="text" onChange={this.props.updateSearch} className="form-control" id="product" placeholder="Wpisz nazwę szukanego produktu" aria-label="product" aria-describedby="basic-addon1" />
+                <input type="text" onChange={this.props.updateSearch} className="form-control" id="product" placeholder="Szukaj w obserwowanych" aria-label="product" aria-describedby="basic-addon1" />
 
-                <div className="input-group-append">
-                    <button className="btn btn-outline-secondary" type="button">Szukaj</button>
-                </div>
-            </div>
+               </div>
         </form>
         );
     }

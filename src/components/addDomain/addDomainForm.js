@@ -37,15 +37,17 @@ export default class AddDomainForm extends Component {
                 </div>
                 <div className="row text-center">
                     <div className="col-md-12">
-                        <input type="submit" className="btn btn-success btn-send " value="Dodaj nową domenę" />
-                    </div>
-                </div>
-                <div className="row text-center">
-                    <div className="col-md-12">
                         <p className="text-muted">
                             <strong>*</strong> Pola oznaczone tym znakiem są wymagane.</p>
                     </div>
                 </div>
+                <div className="row text-center">
+                    <div className="col-md-12">
+                        <input type="submit" className="btn btn-success btn-send " value="Dodaj nową domenę" />
+                    </div>
+                </div>
+                <br />
+               
             </div>
         </form>
         <div>
