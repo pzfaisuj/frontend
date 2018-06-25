@@ -12,26 +12,32 @@ addProduct = (e) => {
     const productCode = e.target.elements.productCode.value;
     const formDescription = e.target.elements.formDescription.value;
     const photoUrl = e.target.elements.photoUrl.value;
-    console.log('sell price: ' + productSellPrice);
-    console.log('product name: ' + productName);
-    console.log('product code: ' + productCode);
-    console.log('description: ' + formDescription);
-    console.log('photoUrl: ' + photoUrl);
-
-    axios.post('/addProduct', {
-        productName: productName ,
-        productSellPrice: productSellPrice ,
-        productCode: productCode ,
-        formDescription: formDescription ,
-        photoUrl: photoUrl
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
+    const links = e.target.elements.links.value;
+      const dt = JSON.stringify(
+        {
+            name: productName,
+            price: productSellPrice,
+            productCode: productCode,
+            description: formDescription,
+            imageURL: photoUrl,
+            link: links.split(/\s*,\s*/g)
+        }
+    );
+      console.log('product: ' + dt);
+      axios({
+          method: 'post',
+          url: 'http://localhost:8095/products',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          data: dt
+        }).then((res) => {
+            alert('dodano produkt');
+            console.log(res);
+            window.location.reload();
+        }).catch((err) => {
+          alert('AXIOS addProduct FAILED', err);
+        });
 }
 
     render() {
