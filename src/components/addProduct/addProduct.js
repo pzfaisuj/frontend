@@ -12,13 +12,15 @@ addProduct = (e) => {
     const productCode = e.target.elements.productCode.value;
     const formDescription = e.target.elements.formDescription.value;
     const photoUrl = e.target.elements.photoUrl.value;
+    const links = e.target.elements.links.value;
       const dt = JSON.stringify(
         {
             name: productName,
             price: productSellPrice,
             productCode: productCode,
             description: formDescription,
-            imageURL: photoUrl
+            imageURL: photoUrl,
+            link: links.split(/\s*,\s*/g)
         }
     );
       console.log('product: ' + dt);

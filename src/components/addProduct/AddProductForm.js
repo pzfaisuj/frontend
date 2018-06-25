@@ -98,6 +98,22 @@ export default class AddProductForm extends Component {
                         </div>
                     </div>
                 </div>
+
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="form-group">
+                            <label htmlFor="links">
+                                <h4>Linki zewnętrzne do produktu : </h4>
+                            </label>
+                            <textarea id="links" name="links" className="form-control" placeholder="www.ceneo.com/234dfs43" rows="3" data-error="Prosze podać linki do produktu oddzielone przecinkiem."
+                                required></textarea>
+                            <div className="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div className="row text-center">
                     <div className="col-md-12">
                         <input type="submit" className="btn btn-success btn-send " value="Dodaj produkt" />
